@@ -1,3 +1,15 @@
 h3 {
     color: darkblue;
 }
+
+.warning {
+    background-color: #FFEEBA;
+}
+
+.success {
+    background-color: #C3E6CB;
+}
+
+.secondary {
+    background-color: #D6D8DB;
+}
