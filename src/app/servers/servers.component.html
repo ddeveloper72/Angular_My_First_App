@@ -1,8 +1,15 @@
 <label>Server Name</label>
+<p class="mt-2">One-way data binding</p>
 <input
 type="text"
 class="form-control"
 (input)="onUpdateServerName($event)">
+<hr>
+<p class="mt-2">2-way data binding</p>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
 <p>{{ serverName }}</p>
 <button class="btn btn-primary mb-2"
 [disabled]="!allowNewServer"
