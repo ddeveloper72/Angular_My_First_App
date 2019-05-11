@@ -13,8 +13,5 @@ class="form-control"
 [(ngModel)]="userName">
 <p>{{ userName }}</p>
 <button class="btn btn-primary mb-2"
-[disabled]="!allowNewName"
-(click)="onCreateUser()">Add Name</button>
-<!-- <p [innerText]='allowNewServer'></p> -->
-<p>{{ nameCreationStatus }}</p>
-<app-server></app-server>
+[disabled]="userName === ''"
+(click)="userName = ''">Clear Name</button>
