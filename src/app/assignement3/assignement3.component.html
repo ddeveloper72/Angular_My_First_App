@@ -1,19 +1,26 @@
-<label>Assignment 3</label>
-<ol>
-  <li>Add a button that says 'Display Details'</li>
-  <li>Add a paragraph with content of your choice (e.g. 'Secret password = Tuna')</li>
-  <li>Toggle the display of that paragraph with the button created in the 1st step.</li>
-  <li>Log all clicks in an array and output the array below the secret paragraph,<br />
-    maybe log as time stamp or simply an incrementing number</li>
-  <li>Starting at the 5th log item, give all future log items a blue background color (via ngStyle)<br />and white color
-    (ngClass)</li>
-</ol>
-<!-- <button class="btn btn-primary mb-2 mt-2" (click)="showParagraph = !showParagraph"
->Display Details</button> -->
-<button class="btn btn-primary mb-2 mt-2" (click)="toggleSwitch()">Display Details</button>
-
-<ol>
-  <li *ngIf="showParagraph">Secret password = Tuna</li>
-</ol>
-<div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >=5 ? '#0069D9':'transparent'}"
-  [ngClass]="{text: logItem >=5 }">{{ logItem }}</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Assignment 3</label>
+      <ol>
+        <li>Add a button that says 'Display Details'</li>
+        <li>Add a paragraph with content of your choice (e.g. 'Secret password = Tuna')</li>
+        <li>Toggle the display of that paragraph with the button created in the 1st step.</li>
+        <li>Log all clicks in an array and output the array below the secret paragraph,<br />
+          maybe log as time stamp or simply an incrementing number</li>
+        <li>Starting at the 5th log item, give all future log items a blue background color (via ngStyle)<br />and white color
+          (ngClass)</li>
+      </ol>
+      <!-- <button class="btn btn-primary mb-2 mt-2" (click)="showParagraph = !showParagraph"
+      >Display Details</button> -->
+      <button class="btn btn-primary mb-2 mt-2" (click)="toggleSwitch()">Display Details</button>
+      <ol class="list-group">
+        <li *ngIf="showParagraph" class="list-group-item secondary">Secret password = Tuna</li>
+      </ol>
+      <ol class="list-group">
+        <li *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >=5 ? '#0069D9':'transparent'}"
+          [ngClass]="{text: logItem >=5 }" class="list-group-item secondary">{{ logItem }}</li>
+      </ol>
+    </div>
+  </div>
+</div>
