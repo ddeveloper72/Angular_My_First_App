@@ -7,3 +7,9 @@
   maybe log as time stamp or simply an incrementing number</li>
   <li>Starting at the 5th log item, give all future log items a blue background color (via ngStyle)<br />and white color (ngClass)</li>
 </ol>
+<button class="btn btn-primary mb-2 mt-2" (click)="showParagraph = !showParagraph"
+>Display Details</button>
+
+<ol>
+  <li *ngIf="showParagraph">Secret password = Tuna</li>
+</ol>
