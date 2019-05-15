@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignement3Component implements OnInit {
   showParagraph = false;
+  log = [];
 
   toggleSwitch() {
     this.showParagraph = !this.showParagraph;
+    this.log.push(this.log.length + 1)
   }
 
   constructor() {
