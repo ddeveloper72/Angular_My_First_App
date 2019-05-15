@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class Assignement3Component implements OnInit {
   showParagraph = false;
 
-  constructor() { }
+  toggleSwitch() {
+    this.showParagraph = !this.showParagraph;
+  }
+
+  constructor() {
+
+  }
 
   ngOnInit() {
   }
