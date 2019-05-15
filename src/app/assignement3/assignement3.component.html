@@ -17,9 +17,13 @@
       <ol class="list-group">
         <li *ngIf="showParagraph" class="list-group-item secondary">Secret password = Tuna</li>
       </ol>
-      <ol class="list-group">
+      <!-- <ol class="list-group">
         <li *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >=5 ? '#0069D9':'transparent'}"
           [ngClass]="{text: logItem >=5 }" class="list-group-item secondary">{{ logItem }}</li>
+      </ol> -->
+      <ol class="list-group">
+        <li *ngFor="let logItem of log; let i = index" [ngStyle]="{backgroundColor: i >=4 ? '#0069D9':'transparent'}"
+          [ngClass]="{text: i >=4 }" class="list-group-item secondary">{{ logItem }}</li>
       </ol>
     </div>
   </div>
