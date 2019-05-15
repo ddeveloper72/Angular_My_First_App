@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignement3.component.css']
 })
 export class Assignement3Component implements OnInit {
+  showParagraph = false;
 
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
